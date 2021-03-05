@@ -1,17 +1,15 @@
-/*
- * @Author: codingfly
- * @Description: 
- * @Date: 2021-01-20 09:25:01
- * @LastEditTime: 2021-01-20 09:37:06
- * @FilePath: \quan_wx\src\app.tsx
- */
 import React, { useEffect } from 'react';
 import dva from 'remax-dva';
-import todo from './models/todo';
+import { global, home } from './models'
 import { useAppEvent } from 'remax/macro';
 
+import 'annar/dist/annar.css';
+import '@/assets/css/app.css'
+
 const app = dva();
-app.model(todo);
+
+app.model(global);
+app.model(home);
 const App = app.start((props: any) => {
     useAppEvent('onLaunch', () => {
         console.log('onLaunch');

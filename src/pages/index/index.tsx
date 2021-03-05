@@ -2,7 +2,7 @@
  * @Author: codingfly
  * @Description: 
  * @Date: 2021-01-20 09:18:14
- * @LastEditTime: 2021-01-20 09:57:50
+ * @LastEditTime: 2021-03-05 21:38:36
  * @FilePath: \quan_wx\src\pages\index\index.tsx
  */
 import React, { useEffect, useState } from 'react';
@@ -13,7 +13,7 @@ import { usePageEvent } from 'remax/macro';
 import { Tag } from 'annar';
 import { href, toast, setStorage } from '@/utils/common'
 import { deepClone } from '@/utils/util';
-import { getBanners, getProductStatus, getNavs, getRecord } from '@/api';
+import { userLogin } from '@/servers';
 import page_path from '@/utils/page_path';
 import styles from './index';
 
